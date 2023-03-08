@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "db50c3ad-db18-4bc1-b683-9ace76765dc1",
+		"name": "IMP Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9205908"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test_user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "cscscscs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/api/auth/login",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fullname",
+							"value": "Yuri",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "nia",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "cscscscs",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "cscscscs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/api/auth/register",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URI}}/api/user/userlist",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"userlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URI}}/api/auth/logout",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URI",
+			"value": "imp-assignment.test",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vaW1wLWFzc2lnbm1lbnQudGVzdC9hcGkvYXV0aC9yZWdpc3RlciIsImlhdCI6MTY3ODI2MjgzNywiZXhwIjoxNjc4MjY2NDM3LCJuYmYiOjE2NzgyNjI4MzcsImp0aSI6InRqaFJLTHU0aUNYWVd1YmMiLCJzdWIiOiIxNyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.osByqCfJfGZL09jccTlt06dg-c2NEum_nPeFQVZJK3Q",
+			"type": "string"
+		}
+	]
+}
